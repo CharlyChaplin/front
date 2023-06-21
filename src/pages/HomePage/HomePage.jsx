@@ -1,6 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { TestDiv } from './styled';
+import { PageWrapper } from 'App.styled';
+import { ProductGroup, ProductGroupContainer } from './styled';
+import ProductCard from 'blocks/ProductCard/ProductCard';
+import { dummyProducts } from 'pages/dummyProducts';
 
 const HomePage = () => {
 	return (
@@ -9,8 +12,23 @@ const HomePage = () => {
 				<title>Главная - MW Marketplace</title>
 			</Helmet>
 
-			<h1>Главная - MW Marketplace</h1>
-			<TestDiv />
+			<PageWrapper>
+				<ProductGroup>
+					<h2>Рекомендуемые товары</h2>
+
+					<ProductGroupContainer>
+						{
+							dummyProducts.map(p => (
+								<ProductCard
+									{...p}
+									key={p.id}
+								/>
+							))
+						}
+					</ProductGroupContainer>
+				</ProductGroup>
+			</PageWrapper>
+
 		</>
 	);
 }

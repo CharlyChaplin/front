@@ -3,7 +3,6 @@ import Header from "features/Header/Header";
 import { Suspense } from "react";
 // import PrivateRoutes from "routes/PrivateRoutes";
 import PublicRoutes from "routes/PublicRoutes";
-import './app.css';
 
 function App() {
 	return (
