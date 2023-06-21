@@ -1,14 +1,28 @@
+import { AppStyles, Footer, PageWrapper } from "App.styled";
+import Header from "features/Header/Header";
 import { Suspense } from "react";
-import PrivateRoutes from "routes/PrivateRoutes";
+// import PrivateRoutes from "routes/PrivateRoutes";
 import PublicRoutes from "routes/PublicRoutes";
+import './app.css';
 
 function App() {
 	return (
 		<>
+			<AppStyles />
+
+			<Header />
+
 			<Suspense fallback={'Loading...'}>
-				{/* <PrivateRoutes /> */}
-				<PublicRoutes />
+				<PageWrapper>
+					{/* <PrivateRoutes /> */}
+					<PublicRoutes />
+				</PageWrapper>
+
 			</Suspense>
+
+			<Footer>
+				<div>&copy; Маркетплейс MW</div>
+			</Footer>
 		</>
 	);
 }
