@@ -1,5 +1,6 @@
 const colors = {
 	primary: '#45A9DA',
+	danger: '#F00',
 };
 
 

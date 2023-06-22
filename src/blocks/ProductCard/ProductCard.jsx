@@ -38,7 +38,7 @@ const ProductCard = ({
 							Number.isInteger(priceDiscounted)
 								?
 								<>
-									<PriceDiscounted>{priceDiscounted} ₽</PriceDiscounted>
+									<PriceDiscounted>{priceDiscounted} &#8381;</PriceDiscounted>
 									<PriceRegularWhenDiscounted>{price}</PriceRegularWhenDiscounted>
 								</>
 								: (<PriceRegular>{price}</PriceRegular>)

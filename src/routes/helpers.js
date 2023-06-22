@@ -4,7 +4,11 @@
 
 export const pathsPublic = {
 	home: '/',
+	login: '/login',
+	logout: '/logout',
 	productDetails: '/product/:idOrSlug',
+	favorites: '/favorites',
+	cart: '/cart',
 };
 
 export const pathsPrivate = {
