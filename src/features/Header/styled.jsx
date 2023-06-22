@@ -95,11 +95,7 @@ export const RightSide = styled.div`
   }
 `
 
-export const BtnOrders = styled(props => (
-	<div {...props}>
-		<Link to={paths.favorites} />
-	</div>
-))`
+export const BtnOrders = styled.div`
   cursor: pointer;
   width: 20px;
   height: 20px;

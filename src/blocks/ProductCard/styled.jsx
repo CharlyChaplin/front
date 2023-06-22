@@ -23,6 +23,13 @@ export const LikeWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(${({ color }) => color === colors.danger ? 1.1 : 1.0});
+  transition: all 0.3s cubic-bezier(0.75, -1, 0.21, -1) 0s;
+  
+  svg {
+	 fill: ${(p => p.color)};
+	 transition: fill 0.3s cubic-bezier(0.75, -1, 0.21, -1) 0s
+  }
 `
 
 export const Image = styled.img`
@@ -73,8 +80,8 @@ export const Desc = styled.div`
 export const BtnsWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  * + * {
+  gap: 10px
+  /* * + * {
     margin-top: 10px;
-  }
+  } */
 `

@@ -13,10 +13,13 @@ import logoPng from 'img/logo.png';
 import Button from 'components/Button/Button';
 import Input from 'components/Input/Input';
 import UserDropdownMenu from './UserDropdownMenu';
+import { selectFavorites } from 'features/Favorites/selector';
 
 
 const Header = () => {
 	const isLogged = useSelector(selectIsLogged);
+	const favorites = useSelector(selectFavorites);
+	
 	const [searchInput, setSearchInput] = useState('');
 
 	const changeSearchInput = useCallback(e => setSearchInput(e.target.value), []);
@@ -53,7 +56,7 @@ const Header = () => {
 						isLogged
 							? <>
 								<BtnOrders />
-								<BtnFavorites />
+								<BtnFavorites count={favorites.length} />
 								<BtnNotifications />
 								<BtnCart />
 								<UserDropdownMenu />

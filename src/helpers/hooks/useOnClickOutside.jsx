@@ -6,7 +6,6 @@ export const useOnClickOutside = (ref, handler) => {
 	useEffect(() => {
 		const listener = e => {
 			if (!ref.current || ref.current.contains(e.target)) return;
-			console.log("Hello");
 			handler(e);
 		}
 

@@ -2,7 +2,7 @@ export const dummyProducts = [
 	{
 		id: 1,
 		slug: 'netbook-digme-eve-15c419',
-		imgSrc: '//avatars.mds.yandex.net/get-marketcms/1534436/img-ff1fb56d-5400-4926-9bd8-6531eaa47cb0.png/optimize',
+		imgSrc: 'https://avatars.mds.yandex.net/get-marketcms/1534436/img-ff1fb56d-5400-4926-9bd8-6531eaa47cb0.png/optimize',
 		price: 11295,
 		priceDiscounted: 10433,
 		title: 'Ноутбук DIGMA EVE 15C419',

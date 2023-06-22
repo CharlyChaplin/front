@@ -15,6 +15,6 @@ export const DropdownWrapper = styled.div`
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
   position: absolute;
   top: calc(100% + 10px);
-  ${({ toLeft }) => toLeft ? 'right' : 'left'}: 0;
+  ${p => p.toLeft ? 'right' : 'left'}: 0;
   z-index: ${Z_INDEX_LEVEL_1};
 `

@@ -21,8 +21,6 @@ const userDataReducer = createReducer(initialState, builder => {
 	)
 });
 
-export const setUserData = userData => dispatch => {
-	dispatch(setUserDataAction(userData));
-};
+export const setUserData = userData => setUserDataAction(userData);
 
 export default userDataReducer;

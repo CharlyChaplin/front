@@ -4,8 +4,13 @@ import { PageWrapper } from 'App.styled';
 import { ProductGroup, ProductGroupContainer } from './styled';
 import ProductCard from 'blocks/ProductCard/ProductCard';
 import { dummyProducts } from 'pages/dummyProducts';
+import { useSelector } from 'react-redux';
+import { selectFavorites } from 'features/Favorites/selector';
 
 const HomePage = () => {
+
+	const idsInFavorites = useSelector(selectFavorites);
+
 	return (
 		<>
 			<Helmet>
@@ -22,6 +27,7 @@ const HomePage = () => {
 								<ProductCard
 									{...p}
 									key={p.id}
+									isLiked={idsInFavorites.includes(p.id)}
 								/>
 							))
 						}
